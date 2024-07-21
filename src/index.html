@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Trading Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Automatic Cryptocurrency Trading Bot</h1>
+        <form id="tradingForm">
+            <div class="form-group">
+                <label for="crypto">Select Cryptocurrency:</label>
+                <select id="crypto" name="crypto"></select>
+            </div>
+            <div class="form-group">
+                <label for="currency">Select Currency:</label>
+                <select id="currency" name="currency"></select>
+            </div>
+            <div class="form-group">
+                <label for="buyPriceRange">Buy Price Range (in selected currency):</label>
+                <input type="text" id="buyPriceRange" name="buyPriceRange" placeholder="e.g., 30000-32000">
+            </div>
+            <div class="form-group">
+                <label for="buyTriggerPrice">Buy Trigger Price (in selected currency):</label>
+                <input type="number" id="buyTriggerPrice" name="buyTriggerPrice" placeholder="e.g., 31000">
+            </div>
+            <div class="form-group">
+                <label for="sellPriceRange">Sell Price Range (in selected currency):</label>
+                <input type="text" id="sellPriceRange" name="sellPriceRange" placeholder="e.g., 34000-35000">
+            </div>
+            <div class="form-group">
+                <label for="sellTriggerPrice">Sell Trigger Price (in selected currency):</label>
+                <input type="number" id="sellTriggerPrice" name="sellTriggerPrice" placeholder="e.g., 34500">
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start Time:</label>
+                <input type="datetime-local" id="startTime" name="startTime">
+            </div>
+            <div class="form-group">
+                <label for="stopTime">Stop Time:</label>
+                <input type="datetime-local" id="stopTime" name="stopTime">
+            </div>
+            <div class="form-group">
+                <button type="button" id="startButton" onclick="startTrading()">Start Trading</button>
+            </div>
+            <div class="form-group">
+                <button type="button" id="stopButton" onclick="stopTrading()">Stop Trading</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
